@@ -2,6 +2,7 @@ import React from "react";
 //import "./styles.css";
 import { Card, Image, Icon } from "semantic-ui-react";
 import "semantic-ui-css/semantic.min.css";
+import moment from "moment";
 
 const CardExampleCard = ({ weatherData }) => (
   <Card>
@@ -26,11 +27,13 @@ const CardExampleCard = ({ weatherData }) => (
         </p>
         <p>Description: {weatherData.weather[0].main}</p>
         <p>Humidity: {weatherData.main.humidity} %</p>
+        <p>Day: {moment().format("dddd")}</p>
+        <p>Date: {moment().format("LL")}</p>
       </Card.Description>
     </Card.Content>
     <Card.Content extra>
       <Icon name="tint" />
-      {weatherData.main.humidity} %
+      {weatherData.main.humidity} % &nbsp;&nbsp;
       <Icon name="thermometer" />
       {weatherData.main.temp} &deg;C
     </Card.Content>
