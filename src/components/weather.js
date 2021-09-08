@@ -39,7 +39,6 @@ const CardExampleCard = ({ weatherData }) => {
             )}
           </p>
           <p>Description: {weatherData.weather[0].main}</p>
-          <p>Humidity: {weatherData.main.humidity} %</p>
           <p>Day: {moment().format("dddd")}</p>
           <p>Date: {moment().format("LL")}</p>
         </Card.Description>
